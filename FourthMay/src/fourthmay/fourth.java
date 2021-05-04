@@ -31,9 +31,3 @@ public class fourth {
         System.out.println("Resale price of car in " + year + " is " + Math.max(price,Bprice));
         
     }
-    
- }
-}
-		
-	}
-}
