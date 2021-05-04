@@ -1,0 +1,36 @@
+1. How to compile a java file?
+-> Type command in cmd
+           javac programname.java
+     Ex. javac first.java
+
+2. How to run a class file?
+-> Type command in cmd
+           java programname.class
+     Ex. java first.class
+
+3. How to debug a java file?
+-> Right click on the java class that contains the main method.
+    Select Debug As → Java Application.
+
+4. How to set classpath?
+-> Select Start, select Control Panel. double click System, and select the Advanced tab.
+    Click Environment Variables. In the section System Variables, find the PATH environment variable and select it. ...
+    In the Edit System Variable (or New System Variable) window, specify the value of the PATH environment variable. Click OK.
+
+5. How to view current classpath?
+-> echo ${classpath}
+
+6. How to set destination of the class file?
+-> type command in cmd
+       javac filename.java -d "path to store the .class file"
+
+7. How to run a compiled class file?
+-> using java javafile.class command
+
+8. How to check version of java running on your system?
+-> type command in cmd
+       java -version
+
+9. How to set classpath when class files are in .jar file?
+-> type command in cmd
+       $ set CLASSPATH=.;C:\dependency\framework.jar
