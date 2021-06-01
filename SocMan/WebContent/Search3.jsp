@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
+<%
+Class.forName("com.mysql.jdbc.Driver");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search</title>
+</head>
+<body>
+	<%
+	String flatno = request.getParameter("flatno");
+	String block = request.getParameter("block");
+
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/society", "root", "root");
+	Statement statement = connection.createStatement();
+	ResultSet resultset = statement
+			.executeQuery("select * from society.vehicle where flat_no='" + flatno + "'and block_no='" + block + "'");
+	%>
+	<table border="1">
+		<tr>
+			<th>Person Name</th>
+			<th>Flat No</th>
+			<th>Block No</th>
+			<th>Vehicle Type</th>
+			<th>Registration No</th>
+			<th>Color</th>
+		</tr>
+		<%
+		while (resultset.next()) {
+		%>
+		<tr>
+			<td><%=resultset.getString(1)%></td>
+			<td><%=resultset.getString(2)%></td>
+			<td><%=resultset.getString(3)%></td>
+			<td><%=resultset.getString(4)%></td>
+			<td><%=resultset.getString(5)%></td>
+			<td><%=resultset.getString(6)%></td>
+		</tr>
+		<%
+		}
+		%>
+	</table>
+</body>
+</html>
