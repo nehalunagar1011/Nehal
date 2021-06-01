@@ -1,7 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Database {
@@ -55,15 +54,19 @@ public class Database {
 	public String retrive(User user) {
 		loadDriver(dbdriver);
 		Connection con = getConnection();
-		String result = "Login Successfully";
-		String sql = "select * from society.user where email=? and password=?";
-
+		String result = null;
 		try {
+			String sql = "select * from user where email=? and password=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, user.getEmail());
 			ps.setString(2, user.getPassword());
 
-			ResultSet rs = ps.executeQuery();
+			ps.executeQuery();
+			if (ps.executeQuery().next()) {
+				result = "Login Successfully";
+			} else {
+				result = "Login failed !!";
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page import="java.sql.*"%>
+<%@ page import="java.sql.*,java.io.*"%>
 <%
 Class.forName("com.mysql.jdbc.Driver");
 %>
@@ -37,6 +37,8 @@ Class.forName("com.mysql.jdbc.Driver");
 			<td><%=resultset.getString(6)%></td>
 		</tr>
 		<%
+		PrintWriter out1 = response.getWriter();
+		out1.print("<a href='/SocMan/VehicleMan.jsp'>Menu</a>");
 		}
 		%>
 	</table>

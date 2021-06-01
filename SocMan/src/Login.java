@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -41,15 +40,15 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		User user = new User(email, password);
+		User user = new User(email, password);	
 		Database db = new Database();
-		db.retrive(user);
-		PrintWriter out = response.getWriter();
-		out.print("<a href='/SocMan/VehicleMan.jsp'>Vehicle Management</a>");
-		response.getWriter().print("-----------");
-		out.print("<a href='/SocMan/MainMan.jsp'>Maintenance Management</a>");
-		response.getWriter().print("-----------");
-		out.print("<a href='/SocMan/FeedWall.jsp'>Feed Wall</a>");
+		String result = db.retrive(user); 
+		if(result == "Login Successfully") {
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
+		} else {
+			response.sendRedirect(request.getContextPath() + "/UserLogin.jsp");
+		}
+		
 	}
 
 }

@@ -4,20 +4,19 @@
 <html>
 <head>
 <script>
- function disableSubmit() {
-  document.getElementById("submit").disabled = true;
- }
+	function disableSubmit() {
+		document.getElementById("submit").disabled = true;
+	}
 
-  function activateButton(element) {
+	function activateButton(element) {
 
-      if(element.checked) {
-        document.getElementById("submit").disabled = false;
-       }
-       else  {
-        document.getElementById("submit").disabled = true;
-      }
+		if (element.checked) {
+			document.getElementById("submit").disabled = false;
+		} else {
+			document.getElementById("submit").disabled = true;
+		}
 
-  }
+	}
 </script>
 <meta charset="ISO-8859-1">
 <title>Registration</title>
@@ -48,7 +47,8 @@
 					<td><input type="password" name="cpassword"></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  I Agree Terms & Coditions</td>
+					<td><input type="checkbox" name="terms" id="terms"
+						onchange="activateButton(this)"> I Agree Terms & Coditions</td>
 				</tr>
 				<tr>
 					<td><input type="submit" id="submit" value="Register"></td>

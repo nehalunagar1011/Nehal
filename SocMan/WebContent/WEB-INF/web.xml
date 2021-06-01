@@ -11,6 +11,16 @@
     <url-pattern>/Register</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>UserRegister.jsp</welcome-file>
     </welcome-file-list>

@@ -24,7 +24,8 @@ Class.forName("com.mysql.jdbc.Driver");
 		Statement st = conn.createStatement();
 		int i = st.executeUpdate("insert into society.vehicle values('" + pname + "','" + flatno + "','" + block + "','"
 		+ type + "','" + regno + "','" + color + "')");
-		out.println("Data is successfully inserted!");
+		response.sendRedirect(request.getContextPath() + "/VehicleMan.jsp");
+		
 	} catch (Exception e) {
 		out.println("Data is not inserted , please check the details !!");
 		e.printStackTrace();

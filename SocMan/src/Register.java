@@ -58,6 +58,7 @@ public class Register extends HttpServlet {
 		} else {
 			String result = "Password and Confirm Password Does not match !!";
 			response.getWriter().print(result);
+			response.getWriter().print("-----------");
 			PrintWriter out = response.getWriter();
 			out.print("<a href='/SocMan/UserRegister.jsp'>Registration</a>");
 		}
