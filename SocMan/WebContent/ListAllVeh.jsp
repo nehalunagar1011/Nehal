@@ -19,8 +19,8 @@ Class.forName("com.mysql.jdbc.Driver");
 	<table border="1">
 		<tr>
 			<th>Person Name</th>
-			<th>Flat No</th>
-			<th>Block No</th>
+			<th>Person Email</th>
+			<th>Email</th>
 			<th>Vehicle Type</th>
 			<th>Registration No</th>
 			<th>Color</th>

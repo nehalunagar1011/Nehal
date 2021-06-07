@@ -16,11 +16,12 @@ Class.forName("com.mysql.jdbc.Driver");
 
 	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/society", "root", "root");
 	Statement statement = connection.createStatement();
-	ResultSet resultset = statement.executeQuery("select * from society.vehicle where registration_no='" + regno + "'");
+	ResultSet resultset = statement.executeQuery("select * from society.vehicle where reg_no='" + regno + "'");
 	%>
 	<table border="1">
 		<tr>
 			<th>Person Name</th>
+			<th>Email</th>
 			<th>Flat No</th>
 			<th>Block No</th>
 			<th>Vehicle Type</th>
@@ -37,6 +38,7 @@ Class.forName("com.mysql.jdbc.Driver");
 			<td><%=resultset.getString(4)%></td>
 			<td><%=resultset.getString(5)%></td>
 			<td><%=resultset.getString(6)%></td>
+			<td><%=resultset.getString(7)%></td>
 		</tr>
 		<%
 		PrintWriter out1 = response.getWriter();

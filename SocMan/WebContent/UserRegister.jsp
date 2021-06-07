@@ -15,7 +15,6 @@
 		} else {
 			document.getElementById("submit").disabled = true;
 		}
-
 	}
 </script>
 <meta charset="ISO-8859-1">
@@ -28,23 +27,43 @@
 			<table>
 				<tr>
 					<td>First Name</td>
-					<td><input type="text" name="fname"></td>
+					<td><input type="text" name="fname" required /></td>
 				</tr>
 				<tr>
 					<td>Last Name</td>
-					<td><input type="text" name="lname"></td>
+					<td><input type="text" name="lname" required /></td>
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="email" name="email"></td>
+					<td><input type="email" name="email" required /></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password"></td>
+					<td><input type="password" name="password" required /></td>
 				</tr>
 				<tr>
 					<td>Confirm Password</td>
-					<td><input type="password" name="cpassword"></td>
+					<td><input type="password" name="cpassword" required /></td>
+				</tr>
+				<tr>
+					<td>Birth Date</td>
+					<td><input type="text" name="birth_date" /></td>
+				</tr>
+				<tr>
+					<td>Flat Purchase Date</td>
+					<td><input type="text" name="flat_date" /></td>
+				</tr>
+				<tr>
+					<td>Flat Block</td>
+					<td><input type="text" name="block" /></td>
+				</tr>
+				<tr>
+					<td>Flat No</td>
+					<td><input type="text" name="flatno" /></td>
+				</tr>
+				<tr>
+					<td>Mobile No</td>
+					<td><input type="text" name="mobile" required /></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="terms" id="terms"

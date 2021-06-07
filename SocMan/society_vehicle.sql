@@ -23,11 +23,12 @@ DROP TABLE IF EXISTS `vehicle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vehicle` (
-  `per_name` varchar(50) NOT NULL,
-  `flat_no` varchar(45) DEFAULT NULL,
-  `block_no` varchar(45) DEFAULT NULL,
+  `pname` varchar(50) NOT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `flatno` varchar(45) DEFAULT NULL,
+  `block` varchar(45) DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
-  `registration_no` varchar(45) DEFAULT NULL,
+  `reg_no` varchar(45) DEFAULT NULL,
   `color` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +39,7 @@ CREATE TABLE `vehicle` (
 
 LOCK TABLES `vehicle` WRITE;
 /*!40000 ALTER TABLE `vehicle` DISABLE KEYS */;
-INSERT INTO `vehicle` VALUES ('rahul','101','A','car','GJ05XZ0123','white');
+INSERT INTO `vehicle` VALUES ('Nehal','nehal@gmail.com','A','1','car','GJ05AB1234','blue');
 /*!40000 ALTER TABLE `vehicle` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-01 14:08:25
+-- Dump completed on 2021-06-07 11:16:56

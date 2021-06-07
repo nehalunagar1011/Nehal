@@ -33,13 +33,18 @@ public class Database {
 		loadDriver(dbdriver);
 		Connection con = getConnection();
 		String result = "Registration Successfully";
-		String sql = "insert into society.user values(?,?,?,?)";
+		String sql = "insert into society.user values(?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, user.getFname());
 			ps.setString(2, user.getLname());
 			ps.setString(3, user.getEmail());
 			ps.setString(4, user.getPassword());
+			ps.setString(5,user.getBirth_date());
+			ps.setString(6,user.getFlat_date());
+			ps.setString(7,user.getBlock());
+			ps.setString(8,user.getFlatno());
+			ps.setString(9,user.getMobile());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

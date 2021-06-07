@@ -13,6 +13,7 @@ Class.forName("com.mysql.jdbc.Driver");
 <body>
 	<%
 	String pname = request.getParameter("pname");
+	String email = request.getParameter("email");
 	String flatno = request.getParameter("flatno");
 	String block = request.getParameter("block");
 	String type = request.getParameter("type");
@@ -22,7 +23,7 @@ Class.forName("com.mysql.jdbc.Driver");
 	try {
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/society", "root", "root");
 		Statement st = conn.createStatement();
-		int i = st.executeUpdate("insert into society.vehicle values('" + pname + "','" + flatno + "','" + block + "','"
+		int i = st.executeUpdate("insert into society.vehicle values('" + pname + "','" + email + "','" + flatno + "','" + block + "','"
 		+ type + "','" + regno + "','" + color + "')");
 		response.sendRedirect(request.getContextPath() + "/VehicleMan.jsp");
 		

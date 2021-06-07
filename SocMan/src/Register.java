@@ -46,8 +46,13 @@ public class Register extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String cpassword = request.getParameter("cpassword");
+		String birth_date = request.getParameter("birth_date");
+		String flat_date = request.getParameter("flat_date");
+		String block = request.getParameter("block");
+		String flatno = request.getParameter("flatno");
+		String mobile = request.getParameter("mobile");
 
-		User user = new User(fname, lname, email, password);
+		User user = new User(fname, lname, email, password, birth_date, flat_date, block, flatno, mobile);
 		Database db = new Database();
 		if (password.equals(cpassword)) {
 			String result = db.insert(user);

@@ -23,10 +23,15 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
-  `fname` varchar(50) NOT NULL,
+  `fname` varchar(50) DEFAULT NULL,
   `lname` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL
+  `password` varchar(45) DEFAULT NULL,
+  `birth_date` varchar(45) DEFAULT NULL,
+  `flat_date` varchar(45) DEFAULT NULL,
+  `block` varchar(45) DEFAULT NULL,
+  `flatno` varchar(45) DEFAULT NULL,
+  `mobile` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +41,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('rahul','patel','rahul@abc.com','rahul'),('jay','solanki','jay@abc.com','jay'),('vivek','patel','vivek@abc.com','vivek');
+INSERT INTO `user` VALUES ('Nehal','Unagar','nehal@gmail.com','nehal','10/11/1999','21/01/2020','A','1','9904782429');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-01 14:08:25
+-- Dump completed on 2021-06-07 11:16:57

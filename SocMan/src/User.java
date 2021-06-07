@@ -1,22 +1,30 @@
 public class User {
-	private String fname, lname, email, password;
+	private String fname, lname, email, password, birth_date, flat_date, block, flatno, mobile;
 
-	public User(String fname, String lname, String email, String password) {
+	
+	public User() {
 		super();
-		this.fname = fname;
-		this.lname = lname;
-		this.email = email;
-		this.password = password;
 	}
 
+	
 	public User(String email, String password) {
 		super();
 		this.email = email;
 		this.password = password;
 	}
 
-	public User() {
+
+	public User(String fname, String lname, String email, String password, String birth_date, String flat_date, String block, String flatno, String mobile) {
 		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
+		this.password = password;
+		this.birth_date = birth_date;
+		this.flat_date = flat_date;
+		this.block = block;
+		this.flatno = flatno;
+		this.mobile = mobile;
 	}
 
 	public String getFname() {
@@ -51,4 +59,46 @@ public class User {
 		this.password = password;
 	}
 
+	public String getBirth_date() {
+		return birth_date;
+	}
+
+	public void setBirth_date(String birth_date) {
+		this.birth_date = birth_date;
+	}
+
+	public String getFlat_date() {
+		return flat_date;
+	}
+
+	public void setFlat_date(String flat_date) {
+		this.flat_date = flat_date;
+	}
+
+	public String getBlock() {
+		return block;
+	}
+
+	public void setBlock(String block) {
+		this.block = block;
+	}
+
+	public String getFlatno() {
+		return flatno;
+	}
+
+	public void setFlatno(String flatno) {
+		this.flatno = flatno;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	
 }
+	
